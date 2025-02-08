@@ -1,7 +1,6 @@
 import streamlit as st
 import numpy as np
 from sklearn.preprocessing import LabelEncoder, MinMaxScaler
-import streamlit as st
 import subprocess
 
 # Vérifier si joblib est installé
@@ -11,6 +10,8 @@ try:
 except ModuleNotFoundError:
     st.write("❌ joblib n'est PAS installé. Tentative d'installation...")
     subprocess.run(["pip", "install", "joblib"])
+ 
+
 
 # Charger le modèle entraîné
 model = joblib.load("weather_model20.pkl") 
